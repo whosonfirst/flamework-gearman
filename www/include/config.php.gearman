@@ -1,0 +1,7 @@
+	# START OF flamework-gearman stuff
+
+	$GLOBALS['cfg']['gearman_host'] = 'localhost';
+	$GLOBALS['cfg']['gearman_host'] = 4730;	
+	$GLOBALS['cfg']['gearman_client_timeout'] = 3000;
+
+	# END OF flamework-gearman stuff
