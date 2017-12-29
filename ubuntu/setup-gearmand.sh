@@ -1,5 +1,10 @@
 #!/bin/sh
 
+WHOAMI=`python -c 'import os, sys; print os.path.realpath(sys.argv[1])' $0`
+
+UBUNTU=`dirname $WHOAMI`
+PROJECT=`dirname $UBUNTU`
+
 sudo apt-get update
 sudo apt-get install -y uuid-dev libevent-dev gperf libboost-all-dev php7.0-dev
 
@@ -32,5 +37,7 @@ rm -rf gearmand-1.1.18
 rm master.zip
 rm -rf pecl-gearman-master
 cd -
+
+sudo cp $PROJECT/init.d/gearmand /etc/init.d/gearmand
 
 exit 0
