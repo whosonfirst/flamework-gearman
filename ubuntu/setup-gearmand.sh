@@ -23,7 +23,7 @@ cd /tmp/pecl-gearman-master/
 phpize
 ./configure
 make
-make install
+sudo make install
 cd -
 
 cd /tmp
